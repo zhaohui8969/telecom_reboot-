@@ -11,3 +11,23 @@
   "loop_seconds": "86400"
 }
 ```
+
+# deploy
+
+```bash
+
+# natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:36:08]
+$ sudo cp fuck_telecom_router_reboot.service /etc/systemd/system/
+
+# natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:38:36]
+$ sudo systemctl start fuck_telecom_router_reboot.service
+
+# natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:38:42]
+$ sudo systemctl enable fuck_telecom_router_reboot.service
+
+# natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:38:45]
+$ sudo systemctl status fuck_telecom_router_reboot.service
+
+# natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:38:53]
+$
+```
