@@ -1,0 +1,11 @@
+[Unit]
+Description=Fucking auto reboot telecom router!
+
+[Service]
+Type=simple
+WorkingDirectory=/home/natas/usr/telecom_reboot
+ExecStart=/home/natas/usr/telecom_reboot/start.sh
+ExecStop=/bin/kill -s TERM $MAINPID
+
+[Install]
+WantedBy=multi-user.target
