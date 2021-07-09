@@ -12,6 +12,7 @@ from selenium import webdriver
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config_file', required=True)
+    parser.add_argument('--once', action='store_true', dest='once')
     return parser.parse_args()
 
 
@@ -82,4 +83,7 @@ if __name__ == '__main__':
     with open(args.config_file) as fop:
         config_dict = json.load(fop)
     rebootTool = TelecomRebootTool(config_dict)
-    rebootTool.loop()
+    if args.once:
+        rebootTool.reboot()
+    else:
+        rebootTool.loop()

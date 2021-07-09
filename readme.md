@@ -12,7 +12,7 @@
 }
 ```
 
-# deploy
+# systemd deploy
 
 ```bash
 
@@ -30,4 +30,10 @@ $ sudo systemctl status fuck_telecom_router_reboot.service
 
 # natas @ natas-pc in ~/usr/telecom_reboot on git:master x [14:38:53]
 $
+```
+
+# crontab deploy
+
+```bash
+0 5 * * * cd /home/natas/usr/telecom_reboot && bash ./start_once.sh
 ```
